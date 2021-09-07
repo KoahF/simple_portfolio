@@ -11,7 +11,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lâm Ngọc Anh Khoa</title>
+
 		<link rel="stylesheet" href="default.css" />
+		<link id="theme-style" rel="stylesheet" href="purple.css" />
 	</head>
 	<body>
 		<section class="style1">
@@ -48,15 +50,13 @@
 						</p>
 					</div>
 					<div class="right-column">
-						<div id="preview-shadow">
-							<div id="preview">
-								<div id="corner-tl" class="corner"></div>
-								<div id="corner-tr" class="corner"></div>
-								<h3>What I Do</h3>
-								<p>I'm currently a student</p>
-								<div id="corner-bl" class="corner"></div>
-								<div id="corner-br" class="corner"></div>
-							</div>
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>What I Do</h3>
+							<p>I'm currently a student Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quo modi nostrum.</p>
+							<div id="corner-bl" class="corner"></div>
+							<div id="corner-br" class="corner"></div>
 						</div>
 					</div>
 				</div>
@@ -100,12 +100,14 @@
 						<h2 style="margin-bottom: 0px">Find me on these platforms!</h2>
 
 						<p>
-							<a href="https://www.facebook.com/khoaa.laam/"
+							<a href="https://www.facebook.com/khoaa.laam/" target="_blank"
 								>Facebook: @khoaa.laam
 							</a>
 							<br />
-							<a href="https://github.com/KoahF">Github: @KoahF </a><br />
-							<a href="https://www.hackerrank.com/khoakg2013"
+							<a href="https://github.com/KoahF" target="_blank"
+								>Github: @KoahF </a
+							><br />
+							<a href="https://www.hackerrank.com/khoakg2013" target="_blank"
 								>Hackerrank: @khoakg2013</a
 							>
 						</p>
@@ -117,45 +119,75 @@
 			<div class="main-container">
 				<h3 style="text-align: center">Some of my projects</h3>
 				<div class="post-wrapper">
-
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="./images/Tom.png" alt="">
+							<img class="thumbnail" src="./images/Tom.png" alt="" />
 							<div class="post-preview">
 								<h6 class="post-title">Post Title</h6>
-								<p class="post-intro">Lorem ipsum dolor sit d. <br><br>
-									<a href="#">Read more</a></p></p>
-							</div>
-						</div>
-					</div>
-					
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="./images/Tom.png" alt="">
-							<div class="post-preview">
-								<h6 class="post-title">Post Title</h6>
-								<p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas ad consequatur? Ex, repudiandae molestiae? <br><br>
-									<a href="#">Read more</a></p></p>
+								<p class="post-intro">
+									Lorem ipsum dolor sit d. <br /><br />
+									<a href="#" target="_blank">Read more</a>
+								</p>
 							</div>
 						</div>
 					</div>
 
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="./images/Tom.png" alt="">
+							<img class="thumbnail" src="./images/Tom.png" alt="" />
 							<div class="post-preview">
 								<h6 class="post-title">Post Title</h6>
-								<p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cupiditate recusandae facere, quis aut ducimus! <br><br>
-									<a href="#">Read more</a></p>
+								<p class="post-intro">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+									voluptas ad consequatur? Ex, repudiandae molestiae?
+									<br /><br />
+									<a href="#" target="_blank">Read more</a>
+								</p>
 							</div>
-						</div>	
+						</div>
 					</div>
 
+					<div>
+						<div class="post">
+							<img class="thumbnail" src="./images/Tom.png" alt="" />
+							<div class="post-preview">
+								<h6 class="post-title">Post Title</h6>
+								<p class="post-intro">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+									cupiditate recusandae facere, quis aut ducimus! <br /><br />
+									<a href="#" target="_blank">Read more</a>
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="style2">
-			<div class="main-container">Contact</div>
+			<div class="main-container">
+				<h3 style="text-align: center">Get In Touch</h3>
+
+				<form id="contact-form">
+					<label for="name">Name</label>
+					<input class="input-field" name="name" type="text" />
+
+					<label for="subject">Subject</label>
+					<input class="input-field" name="subject" type="text" />
+
+					<label for="email">Email</label>
+					<input class="input-field" name="email" type="text" />
+
+					<label for="message">Message</label>
+					<textarea
+						name="message"
+						class="input-field"
+						cols="30"
+						rows="10"
+					></textarea>
+
+					<input id="submit-btn" type="submit" value="Send" />
+				</form>
+			</div>
 		</section>
 	</body>
 </html>

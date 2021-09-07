@@ -10,11 +10,18 @@
 	--themeDotBorder: #24292e;
 	--previewBg: rgb(251, 249, 243, 0.8);
 	--previewShadow: #f0ead6;
+
+	--buttonColor: black;
 }
 html,
 body {
 	padding: 0;
 	margin: 0;
+	transition: 0.3;
+}
+
+body * {
+	transition: 0.2s;
 }
 
 h1,
@@ -95,7 +102,7 @@ h6 {
 	background-color: var(--secondaryColor);
 	border: 1px solid var(--borderColor);
 	border-radius: 10px 10px 0 0;
-
+	padding-bottom: 50px;
 	box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.28);
 	-webkit-box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.28);
 	-moz-box-shadow: -1px 0px 2px 1px rgba(0, 0, 0, 0.28);
@@ -205,28 +212,38 @@ h6 {
 .settings-note {
 	font-weight: 12px;
 	font-style: italic;
+	padding-left: 10px;
 }
 .right-column {
 	grid-area: right-column;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	padding-bottom: 50px;
-	padding-left: 50px;
+	/* padding-bottom: 50px; */
+	/* padding-left: 50px; */
 }
-#preview-shadow {
-	background-color: var(--previewShadow);
-	width: 300px;
-	padding-left: 30px;
-	padding-top: 30px;
-	height: 140px;
-}
+
 #preview {
-	padding: 15px;
-	width: 300px;
+	padding: 10px 30px;
+	max-width: 300px;
 	border: 2px solid #17a2b8;
 	background-color: var(--previewBg);
 	position: relative;
+	z-index: 2;
+	box-shadow: -53px -41px 0px 0px var(--previewShadow);
+	-webkit-box-shadow: -53px -41px 0px 0px var(--previewShadow);
+	-moz-box-shadow: -53px -41px 0px 0px var(--previewShadow);
 }
+
+/* #preview-shadow {
+	background-color: var(--previewShadow);
+	max-width: 300px;
+	padding-left: 30px;
+	padding-top: 30px;
+	height: 140px;
+	position: absolute;
+	z-index: 0;
+} */
 
 .corner {
 	width: 7px;
@@ -319,6 +336,36 @@ h6 {
 	color: #4b5156;
 	font-size: 14px;
 }
+
+#contact-form {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	border: 1px solid var(--borderColor);
+	padding: 10px;
+	border-radius: 5px;
+	background-color: var(--mainColor);
+	margin-bottom: 50px;
+}
+
+.input-field {
+	width: 98%;
+	padding: 5px 10px 5px 0;
+	border-radius: 5px;
+	background-color: var(--secondaryColor);
+	border: 1px solid var(--borderColor);
+	font-size: 14px;
+}
+
+#submit-btn {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	background-color: var(--buttonColor);
+	border: none;
+	color: #fff;
+}
 @media screen and (max-width: 1200px) {
 	.main-container {
 		width: 95%;
@@ -337,5 +384,13 @@ h6 {
 	.right-column {
 		justify-content: center;
 		padding-left: 0px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#preview {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
 	}
 }
